@@ -1,0 +1,180 @@
+.header {
+  background-image: url("../src/Background.svg");
+  background-size: cover;
+  overflow-x: hidden;
+
+  &__container {
+    padding: 0 6.4rem;
+    position: relative;
+    max-width: 120rem;
+    margin: 0 auto;
+    height: 96rem;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0rem 2.4rem;
+    }
+  }
+}
+
+.nav {
+  position: relative;
+  z-index: 10;
+
+  &__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 6.4rem 0;
+    gap: 4.2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+    }
+  }
+
+  &__items {
+    display: flex;
+    list-style: none;
+    gap: 2.4rem;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: $color-white;
+    @include h6;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      border-bottom: 1px solid $color-white;
+      margin: 1rem;
+    }
+  }
+}
+
+.hero {
+  &__container {
+    display: flex;
+    gap: 3.2rem;
+    padding: 2.4rem 0;
+  }
+
+  &__content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    color: $color-white;
+    z-index: 10;
+  }
+
+  &__heading {
+    @include h1;
+    animation: slideInRight 0.8s;
+  }
+
+  &__para {
+    @include h5;
+    opacity: 0.7;
+    animation: slideInRight 0.9s;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1.6rem;
+    animation: slideInRight 1s;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      gap: 3.2rem;
+      align-items: flex-start;
+    }
+  }
+
+  &__button--primary {
+    padding: 1.6rem 3.2rem;
+    display: flex;
+    gap: 1.6rem;
+    @include h6;
+    color: inherit;
+    background-color: $color-secondary;
+    border-radius: 100rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 20px 30px rgba($color-gray-1, 0.2);
+    align-items: center;
+
+    &:focus {
+      outline: none;
+    }
+
+    transition: all 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__button--secondary {
+    padding: 1.6rem 3.2rem;
+    display: flex;
+    gap: 1.6rem;
+    @include h6;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 100rem;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+
+    &:focus {
+      outline: none;
+    }
+
+    transition: all 0.3s;
+
+    svg {
+      transition: all 0.3s;
+    }
+
+    span {
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      span {
+        border-bottom: 1px solid $color-white;
+      }
+      svg {
+        transform: translateX(1rem);
+      }
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__image {
+    position: absolute;
+    width: 135.7rem;
+    height: 105.6rem;
+    left: 45rem;
+    top: -14.5rem;
+    z-index: 1;
+    animation: slideInLeft 1s;
+
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+  }
+}

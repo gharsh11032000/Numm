@@ -1,0 +1,69 @@
+// Typescale
+// 55px,44px,35px,28px,22px,18px,14px
+
+// Mixins
+@mixin h1 {
+  font-size: 5.5rem;
+  line-height: 7.2rem;
+  font-weight: 700;
+}
+@mixin h2 {
+  font-size: 4.4rem;
+  line-height: 5.6rem;
+  font-weight: 700;
+}
+@mixin h3 {
+  font-size: 3.5rem;
+  line-height: 4.8rem;
+  font-weight: 700;
+}
+@mixin h4 {
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  font-weight: 500;
+}
+@mixin h5 {
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  font-weight: 400;
+}
+@mixin h6 {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+@mixin small {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+@mixin para {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  font-family: $font-secondary;
+}
+
+.section__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+.section__small {
+  color: $color-secondary;
+  @include small;
+}
+
+.section__heading {
+  color: $color-primary-1;
+  @include h3;
+}
+
+.section__para {
+  color: $color-gray-1;
+  opacity: 0.6;
+  @include h6;
+}

@@ -1,0 +1,64 @@
+// Colors
+$color-primary-1: #0084fe;
+$color-primary-2: #7d17ff;
+$color-secondary: #ffc200;
+$color-tertiary-1: #ae6ffd;
+$color-tertiary-2: #ff5d00;
+$color-gray-1: #030f1a;
+$color-white: #ffffff;
+
+// Fonts
+$font-primary: "Nunito", "sans-serif";
+$font-secondary: "Inter", "sans-serif";
+
+// Queries
+$bp-large: 65.625em;
+$bp-medium: 53.125em;
+$bp-small: 35.625em;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 43.75%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  font-family: $font-primary;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: #0000;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-20rem);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(20rem);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}

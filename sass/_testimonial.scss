@@ -1,0 +1,60 @@
+.testimonial {
+  padding: 8rem 0;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 4rem 0;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 8rem 0;
+  }
+
+  &__container {
+    padding: 4rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 2rem;
+    }
+  }
+
+  &__image {
+    width: 6.4rem;
+    height: 6.4rem;
+  }
+
+  &__quote {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 5.6rem;
+    text-align: center;
+    color: $color-gray-1;
+    opacity: 0.8;
+  }
+
+  &__author {
+    background-image: url("../src/Testimonial\ img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+  }
+
+  &__author-name {
+    @include small;
+    color: $color-gray-1;
+    opacity: 0.4;
+    width: 100%;
+    text-align: center;
+  }
+}

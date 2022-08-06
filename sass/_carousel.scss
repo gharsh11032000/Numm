@@ -1,0 +1,141 @@
+.slider {
+  padding: 16rem 6.4rem;
+  overflow: hidden;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 24rem 6.4rem;
+  }
+
+  &__container {
+    position: relative;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
+
+  &__gradient-img {
+    position: absolute;
+    z-index: -2;
+    top: -40%;
+    left: -16%;
+
+    @media only screen and (max-width: $bp-large) {
+      top: -24%;
+      left: -10%;
+      height: 130rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      top: -30%;
+      left: -24%;
+    }
+  }
+}
+
+#carousel {
+  position: relative;
+  height: 67.5rem;
+}
+
+#carousel div {
+  position: absolute;
+  transition: transform 400ms, left 400ms, opacity 400ms, z-index 0s;
+  opacity: 1;
+}
+#carousel div img {
+  width: 38rem;
+  transition: width 400ms;
+  -webkit-user-drag: none;
+  border-radius: 8px;
+  box-shadow: 0px 20px 30px rgba($color-gray-1, 0.2);
+}
+#carousel div.hideLeft {
+  left: 0%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#carousel div.hideLeft img {
+  width: 20rem;
+}
+#carousel div.hideRight {
+  left: 100%;
+  opacity: 0;
+  transform: translateY(50%) translateX(-50%);
+}
+#carousel div.hideRight img {
+  width: 20rem;
+}
+#carousel div.prev {
+  z-index: 5;
+  left: 30%;
+  transform: translateY(50px) translateX(-50%);
+}
+
+#carousel div.prev img {
+  width: 30rem;
+}
+#carousel div.prevLeftSecond {
+  z-index: 4;
+  left: 15%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#carousel div.prevLeftSecond img {
+  width: 20rem;
+}
+#carousel div.selected {
+  z-index: 10;
+  left: 50%;
+  transform: translateY(0px) translateX(-50%);
+}
+#carousel div.next {
+  z-index: 5;
+  left: 70%;
+  transform: translateY(50px) translateX(-50%);
+}
+#carousel div.next img {
+  width: 30rem;
+}
+#carousel div.nextRightSecond {
+  z-index: 4;
+  left: 85%;
+  transform: translateY(50%) translateX(-50%);
+  opacity: 0.7;
+}
+#carousel div.nextRightSecond img {
+  width: 20rem;
+}
+
+.buttons {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8rem 0;
+  gap: 8rem;
+  -webkit-tap-highlight-color: #0000;
+
+  #prev,
+  #next {
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    svg {
+      transition: all 0.3s;
+    }
+
+    &:hover {
+      svg {
+        transform: scale(2);
+      }
+    }
+
+    &:active {
+      svg {
+        transform: scale(1.5);
+      }
+    }
+  }
+}

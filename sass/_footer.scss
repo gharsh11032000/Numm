@@ -1,0 +1,119 @@
+.footer {
+  padding: 6.4rem;
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 6.4rem 2rem;
+  }
+
+  &__container {
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+
+    @media only screen and (max-width: $bp-small) {
+      gap: 6.4rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      gap: 6.4rem;
+    }
+  }
+
+  &__items {
+    list-style: none;
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+  }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    @include small;
+    color: $color-primary-1;
+
+    transition: all 0.3s;
+
+    &:hover {
+      border-bottom: 1px solid $color-primary-1;
+      margin: 1rem;
+    }
+  }
+
+  &__logo {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  &__bar {
+    width: 100%;
+    height: 2px;
+    background-color: $color-primary-1;
+    opacity: 0.2;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    @include para;
+  }
+
+  &__para {
+    opacity: 0.8;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__contact:link,
+  &__contact:visited {
+    text-decoration: none;
+    color: $color-primary-1;
+    display: block;
+
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__copy {
+    color: $color-gray-1;
+    opacity: 0.4;
+    @include h6;
+  }
+
+  &__icons {
+    opacity: 0.6;
+    display: flex;
+    gap: 1.6rem;
+
+    a {
+      transition: all 0.3s;
+      &:hover {
+        transform: translateY(-5px);
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}

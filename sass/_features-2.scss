@@ -1,0 +1,93 @@
+.features-2 {
+  padding: 12rem 4.8rem;
+  overflow-x: hidden;
+
+  @media only screen and (max-width: $bp-large) {
+    padding: 8rem 2.4rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 10rem 2.4rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 10rem 1rem;
+  }
+
+  &__container {
+    position: relative;
+    padding: 0 4.8rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    gap: 4.8rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 2rem;
+    }
+  }
+
+  &__image {
+    max-width: 50%;
+    margin-left: -20rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-left: 0;
+      max-width: 40%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      max-width: 80%;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  &__card-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    &:not(:first-child) {
+      margin-top: 4.8rem;
+    }
+  }
+
+  &__card {
+    background-color: $color-white;
+    @include h6;
+    color: rgba($color-gray-1, 0.6);
+    box-shadow: 0px 20px 30px rgba($color-gray-1, 0.2);
+    border-radius: 8px;
+    padding: 4rem;
+    text-align: center;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 2rem;
+    }
+  }
+
+  &__gradient-strip {
+    position: absolute;
+    top: -48%;
+    left: -16%;
+    z-index: -2;
+
+    @media only screen and (max-width: $bp-large) {
+      top: -100%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      top: -60%;
+    }
+  }
+}
